@@ -1,0 +1,20 @@
+<%- include("./partials/header.ejs") -%>
+
+<h1>Home</h1>
+<p><%=homeContent%></p>
+<% console.log(posts); %>
+
+
+
+<%  posts.forEach(function(post){   %>
+<%  console.log(post.title); %>
+
+<%}); %>
+
+<%  posts.forEach(function(post){   %>
+<%  console.log(post.content); %>
+
+<%}); %>
+
+
+<%- include("./partials/footer.ejs") -%>
