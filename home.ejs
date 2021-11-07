@@ -7,15 +7,20 @@
 
 
 <%  posts.forEach(function(post){   %>
+    <h1><%=  post.title; %></h1>
+    <% let titleCharacter = post.title %>
+    <%  let contentCharacter = post.content; %>
+    <%  if (contentCharacter.length >= 100){ %>
+    <p><%=  contentCharacter.slice(0, 100) + "..." %> <a href="/posts/<%= post.title%>">Read More</a> </p>
+    <%}else{ %>
+      <%= contentCharacter %>
+    <%}; %>
 
-<h1><%=  post.title %></h1>
-<p><%=  post.content %></p>
-<%}); %>
-
-<%  posts.forEach(function(post){   %>
 
 
-<%}); %>
+  <%}); %>
+
+
 
 
 <%- include("./partials/footer.ejs") -%>
